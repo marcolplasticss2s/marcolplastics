@@ -1,0 +1,87 @@
+---
+layout: default
+title: Tanks &amp; Bunds
+section_id: portfolio
+slides:
+  - bg: images/portfolio/tanks/slide1.jpg
+  - bg: images/portfolio/tanks/slide2.jpg
+  - bg: images/portfolio/tanks/slide3.jpg
+  - bg: images/portfolio/tanks/slide4.jpg
+  - bg: images/portfolio/tanks/slide5.jpg
+---
+
+<div
+  class="full parallax"
+  style="background-color: #999; color: #fff;"
+>
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Tanks &amp; Bunds" tagline="Have a look
+      at our work" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="mod modDefaultSlider">
+        <div class="sequence" data-autostop="off" data-timeout="3000">
+          <a class="sequence-prev" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <a class="sequence-next" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <ul class='sequence-pagination'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign class = 'current' %}
+              {% else %}
+                {% assign class = '' %}
+              {% endif %}
+              <li class="{{class}}"></li>
+            {% endfor %}
+          </ul>
+          <ul class='sequence-canvas'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign style = 'static' %}
+              {% else %}
+                {% assign style = '' %}
+              {% endif %}
+              <li class='frame {{style}} {{ slide.klass }}'>
+                <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="row">
+    <div class="large-8 columns">
+      <h3>Tanks &amp; Bunds</h3>
+      <p>
+        Bunds provide a 'second line of defence' for controlling the safe
+        storage of hazardous liquids and chemicals as they form an enclosure
+        that surrounds a tank. This provides the essential piece of mind should
+        a tank have a catastrophic failure.
+      </p>
+      <p>
+        Our storage tanks would be manufactured using the latest welding
+        equipment / technology. Working with thermoplastics such as,
+        Polypropylene, HDPE and PVDF to name a few. These off the shelf
+        materials are used as materials of construction, due to their high
+        corrosion resistance and their stability over a wide range of
+        temperatures. Tanks and bunds can be built to the latest standards, BS
+        EN 12573, enabling them to store drinking water, acids/alkaline and
+        foodstuff. With thermoplastic the list of media which can be stored in
+        these tanks, is virtually endless.
+      </p>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>

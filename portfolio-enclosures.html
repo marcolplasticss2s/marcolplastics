@@ -1,0 +1,80 @@
+---
+layout: default
+title: Enclosures
+section_id: portfolio
+slides:
+  - bg: images/portfolio/enclosures/slide1.jpg
+  - bg: images/portfolio/enclosures/slide2.jpg
+  - bg: images/portfolio/enclosures/slide3.jpg
+  - bg: images/portfolio/enclosures/slide4.jpg
+  - bg: images/portfolio/enclosures/slide5.jpg
+---
+
+<div
+  class="full parallax"
+  style="background-color: #999; color: #fff;"
+>
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Enclosures" tagline="Have a look
+      at our work" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="mod modDefaultSlider">
+        <div class="sequence" data-autostop="off" data-timeout="3000">
+          <a class="sequence-prev" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <a class="sequence-next" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <ul class='sequence-pagination'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign class = 'current' %}
+              {% else %}
+                {% assign class = '' %}
+              {% endif %}
+              <li class="{{class}}"></li>
+            {% endfor %}
+          </ul>
+          <ul class='sequence-canvas'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign style = 'static' %}
+              {% else %}
+                {% assign style = '' %}
+              {% endif %}
+              <li class='frame {{style}} {{ slide.klass }}'>
+                <div class='bg' style='background-image: url({{ slide.bg }});'></div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="row">
+    <div class="large-8 columns">
+      <h3>Enclosures</h3>
+      <p>
+        The primary operation of an enclosure is to reduce operator exposure
+        increasing safety in any application, they also offer protection to
+        expensive equipment from leaks which could occur from surrounding plant,
+        or just simply protection required from the outdoor elements. Units can
+        be manufactured to store simple chemical carboys, to complex dosing
+        systems, filling booths and sometimes enclosures that are used for
+        machinery protection. If you have a problem and secondary containment
+        seems to be an issue give us a call.
+      </p>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>

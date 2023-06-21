@@ -1,0 +1,27 @@
+<div class='full' style='background-color: #222; color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Our customers" color="#fff" %}
+      <div class='spacing'></div>
+      <p>
+          We collaborate with most industries including, Pharmaceutical; Chemical; Utilities; Oil and Gas; Marine; Nuclear and Steel Industry. We are fortunate to have customers who have worked with us for the last 25 years, having built long-term relationships with them enabling Marcol to understand their business requirements and provide continuous improvement and innovation.
+      </p>
+      <p>
+          Go on, give us a call, we could be the last contractor you look for, for the next 25 years!
+      </p>
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='mod modClients' data-slides_to_show='4'>
+        <div class='clients'>
+          {% for client in site.data.clients %}
+            <div><img alt="" src="{{client.image}}" /></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+</div>

@@ -1,0 +1,80 @@
+---
+layout: default
+title: Ducting &amp; Extraction Systems
+section_id: portfolio
+slides:
+  - bg: images/portfolio/ducting/slide1.jpg
+  - bg: images/portfolio/ducting/slide2.jpg
+  - bg: images/portfolio/ducting/slide3.jpg
+  - bg: images/portfolio/ducting/slide4.jpg
+  - bg: images/portfolio/ducting/slide5.jpg
+---
+
+<div
+  class="full parallax"
+  style="background-color: #999; color: #fff;"
+>
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Ducting &amp; Extraction Systems" tagline="Have a look
+      at our work" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="mod modDefaultSlider">
+        <div class="sequence" data-autostop="off" data-timeout="3000">
+          <a class="sequence-prev" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <a class="sequence-next" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <ul class='sequence-pagination'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign class = 'current' %}
+              {% else %}
+                {% assign class = '' %}
+              {% endif %}
+              <li class="{{class}}"></li>
+            {% endfor %}
+          </ul>
+          <ul class='sequence-canvas'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign style = 'static' %}
+              {% else %}
+                {% assign style = '' %}
+              {% endif %}
+              <li class='frame {{style}} {{ slide.klass }}'>
+                <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="row">
+    <div class="large-8 columns">
+      <h3>Ducting &amp; Extraction Systems</h3>
+      <p>
+        We offer fully designed ventilation systems, including workshop
+        fabrication and installation of specialised complex plastic ductwork
+        projects through to the simple installation of a single duct system for
+        a fume cupboard. The manufacture of specialised adaptors to suit these
+        obscure sizes can be fabricated using material such as Polypropylene,
+        PPs, PVC and HDPE. These off the shelf materials are used for materials
+        of construction, due to their high corrosion resistance and their
+        stability over a wide range of temperatures.
+      </p>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>

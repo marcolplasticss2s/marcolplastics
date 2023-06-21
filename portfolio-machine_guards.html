@@ -1,0 +1,79 @@
+---
+layout: default
+title: Machine Guards
+section_id: portfolio
+slides:
+  - bg: images/portfolio/machine_guards/slide1.jpg
+  - bg: images/portfolio/machine_guards/slide2.jpg
+  - bg: images/portfolio/machine_guards/slide3.jpg
+  - bg: images/portfolio/machine_guards/slide4.jpg
+---
+
+<div
+  class="full parallax"
+  style="background-color: #999; color: #fff;"
+>
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Machine Guards" tagline="Have a look
+      at our work" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="mod modDefaultSlider">
+        <div class="sequence" data-autostop="off" data-timeout="3000">
+          <a class="sequence-prev" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <a class="sequence-next" href="javascript:void(0);">
+            <span></span>
+          </a>
+          <ul class='sequence-pagination'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign class = 'current' %}
+              {% else %}
+                {% assign class = '' %}
+              {% endif %}
+              <li class="{{class}}"></li>
+            {% endfor %}
+          </ul>
+          <ul class='sequence-canvas'>
+            {% for slide in page.slides %}
+              {% if forloop.first %}
+                {% assign style = 'static' %}
+              {% else %}
+                {% assign style = '' %}
+              {% endif %}
+              <li class='frame {{style}} {{ slide.klass }}'>
+                <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="row">
+    <div class="large-8 columns">
+      <h3>Machine Guards</h3>
+      <p>
+        Machine guards are generally for safeguards that can be used to protect
+        workers and personnel in the immediate vicinity of machinery. These are
+        physical barriers that prevent contact with any moving parts. They can
+        be fixed, interlocked, adjustable, or self-adjusting. From our
+        experience when the mesh type guards are not enough, or up to the UK’s
+        stringent standards, we are able to offer an alternative material such
+        as clear Polycarbonate or Acrylic. Acrylic guards look exceptional with
+        their polished edges if you are exhibiting your product.
+      </p>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>

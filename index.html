@@ -1,0 +1,330 @@
+---
+layout: default
+section_id: home
+slides:
+  - bg: images/carousel/1.jpg
+    small_title:
+      klass: bottom-to-top
+      text: Welcome To
+    title:
+      klass: bottom-to-top
+      text: Marcol Fabrications
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Get in touch
+          link_to: /contact.html
+  - bg: images/carousel/2.jpg
+    klass: centered-text
+    small_title:
+      klass: bottom-to-top
+      text: Whatever you need
+    title:
+      klass: bottom-to-top
+      text: On budget and on time
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Get in touch
+          link_to: /contact.html
+  - bg: images/carousel/3.jpg
+    klass: centered-text
+    small_title:
+      klass: bottom-to-top
+      text: Combining Excellence with Experience
+    title:
+      klass: bottom-to-top
+      text: A winning combination
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Get in touch
+          link_to: /contact.html
+  - bg: images/carousel/4.jpg
+    klass: centered-text
+    small_title:
+      klass: bottom-to-top
+      text: Delivered to your door
+    title:
+      klass: bottom-to-top
+      text: No matter how big or small
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Get in touch
+          link_to: /contact.html
+
+works:
+  - image: images/category_images/scrubbing.jpg
+    title: Scrubbing Systems
+    link_to: portfolio-scrubbing.html
+    klass: graphi-design
+  - image: images/category_images/enclosures.jpg
+    title: Enclosures
+    link_to: portfolio-enclosures.html
+    klass: graphi-design
+  - image: images/category_images/tanks.jpg
+    title: Tanks &amp; Bunds
+    link_to: portfolio-tanks_and_bunds.html
+    klass: graphi-design
+  - image: images/category_images/ducting_and_extraction.jpg
+    title: Ducting &amp; Extraction Systems
+    link_to: portfolio-ducting_and_extraction.html
+    klass: graphi-design
+  - image: images/category_images/machine_guards.jpg
+    title: Machine Guards
+    link_to: portfolio-machine_guards.html
+    klass: graphi-design
+  - image: images/category_images/drip_trays.jpg
+    title: Pipework
+    link_to: portfolio-pipework_driptrays.html
+    klass: graphi-design
+  - image: images/category_images/bespoke.jpg
+    title: Bespoke Fabrication
+    link_to: portfolio-bespoke.html
+    klass: graphi-design
+  - image: images/category_images/wet_benches.jpg
+    title: Installation
+    link_to: portfolio-installation.html
+    klass: graphi-design
+
+services:
+  - icon: copy
+    title: Materials
+    desc: The fundamental part for any project, no matter how big, or small, is ensuring that you begin with the correct materials for your product / application. We offer in-depth material compatibility checks, along with supporting documentation and can advise on the following materials, CPVC, PVDF, PVC, Polypropylene, Polyethylene to name but a few. Get in touch for further advise and alternative materials you may be considering.
+  - icon: cogs
+    title: Design
+    desc: From a conceptual, or proven design, with our wealth of experience and technical knowhow of our products, we can interpret your concept and bring it to realisation working closely with you our customer to formulate an initial proposal; laying out a strategy; through to the planning and the manufacture of a project, right to the point of delivery / installation (if required).
+  - icon: pagelines
+    title: Manufacture
+    desc: This is the heart of our business, working in tandem with experience in design. With the experience combined with a fully trained / skilled workforce, makes the manufacture of your products; the construction; the assembly and the fabrication all being shaped and forged to provide an engineered product that fully satisfies your requirements.
+  - icon: truck
+    title: Installation
+    desc: We offer a fully trained site installation team who have all the required Site Working Safety Passports, to carry out all your onsite requirements from a simple repair, installation of chemical pipe-work, all the way through to the installation of a complete “Turnkey Project”, consisting of tanks, extraction, scrubbing systems, dosing rigs, enclosures, interconnection pipework etc. the list is endless.
+---
+
+<div class="mod modDefaultSlider">
+  <div class="sequence" data-autostop="off" data-timeout="3000">
+    <a class="sequence-prev" href="javascript:void(0);">
+      <span></span>
+    </a>
+    <a class="sequence-next" href="javascript:void(0);">
+      <span></span>
+    </a>
+    <ul class='sequence-pagination'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'current' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
+    </ul>
+    <ul class='sequence-canvas'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign style = 'static' %}
+        {% else %}
+          {% assign style = '' %}
+        {% endif %}
+
+      <li class="frame {{ style }} {{ slide.klass }}">
+        <div class="bg" style="background-image: url({{ slide.bg }});"></div>
+        <div class="small-title {{ slide.small_title.klass }}">
+          <div class="row">
+            <div class="large-12 columns">
+              <h2>{{ slide.small_title.text }}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="title {{ slide.title.klass }}">
+          <div class="row">
+            <div class="large-12 columns">
+              <h2>{{ slide.title.text }}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="buttons-wrapper {{ slide.buttons.klass }}">
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="two spacing"></div>
+              {% for button in slide.buttons.items %}
+              <a
+                class="button {{ button.klass }}"
+                href="{{ button.link_to }}"
+                >{{ button.text }}</a
+              >
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="What We Do" %}
+      <div class="spacing"></div>
+      <p>
+        Marcol manufacture to a wide range of innovative designs ideas, using
+        industrialised plastics to fabricate the supply needs for the Nuclear
+        Industry to the Educational sector, in other words products designed to
+        operate across the complete spectrum of nearly all environments and
+        industries. Our range is very diverse and is mostly tailor-made to suit
+        each of our customer requirements.
+      </p>
+      <p>
+        Our facilities located in Bristol, which are purposely designed for the
+        manufacture of large-scale projects using the latest developments in
+        welding and fusion technology. Our flexibility allows us to also
+        undertake short-run batch production for items such as containment
+        trays, intricate pipework and machine guarding.
+      </p>
+      <p>
+        All our staff are fully trained and skilled in the various welding and
+        fusion techniques used in modern bonding and fabrication of plastic
+        products. We have the skills to be able to fabricate complex shapes and
+        designs. Our company policy promotes ongoing staff development and
+        training as an essential investment.
+      </p>
+      <p>
+        From your initial contact, we are here to help our customers. We can
+        take your concept and develop an effective and innovative solution to
+        satisfy your requirements. Based on our numerous years of experience and
+        knowledge with design, plastic fabrication and pipework.
+      </p>
+      <p>
+        Our service includes design, direction, detailed 3d drawings,
+        specification, in-house manufacturing and where appropriate,
+        installation including “Turnkey Projects”.
+      </p>
+      <p>
+        If required, our engineers will attend site and take measurements,
+        collecting data for analysis and reporting.
+      </p>
+      <p>
+        We offer pre-tender meetings, post tender meetings, post order meetings,
+        HAZOP discussions and are fully conversant with health and safety and
+        other relevant legislation.
+      </p>
+      <p>
+        Let us help you to fulfil your requirements for a cost effective and
+        quality product, whether you want it delivered, or installed.
+        <a href="contact.html">Contact</a> a member of our friendly and
+        knowledgeable team to discuss further your aspirations. We are here to
+        help.
+      </p>
+      <div class="three spacing"></div>
+    </div>
+  </div>
+
+  <div class="mod modGallery">
+    <ul
+      class="gallery small-block-grid-2 medium-block-grid-3 large-block-grid-4"
+    >
+      {% for work in page.works %}
+      <li class="{{ work.klass }}">
+        <a href="{{ work.link_to }}">
+          <img alt="" src="{{ work.image }}" />
+          <div class="overlay">
+            <div class="thumb-info">
+              <h3>{{ work.title }}</h3>
+              <p style="color: red;">{{ work.desc }}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Our services" %}
+      <div class="spacing"></div>
+      <p>
+        Our services include Fresh designs, which will lead to material
+        selection, followed by 3D drawings to the required specifications, then
+        onto manufacturing in a purpose laid out workshop, then if required
+        delivered to site for installation completing with a final SAT (Site
+        acceptance test) along with all certification.
+      </p>
+      <div class="three spacing"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 columns">
+      <img class="fadeinleft" alt="" src="images/services.jpg" />
+      <div class="three spacing"></div>
+    </div>
+    <div class="medium-6 columns">
+      {% for service in page.services %}
+      <div
+        class="fadein mod modIconText"
+        data-delay="{{ 300 | times: forloop.index0 }}"
+      >
+        <div class="icon-text-simple">
+          <i class="fa fa-{{ service.icon }}"></i>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+        </div>
+        <div class="two spacing"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
+
+<div class="full" style="background: #f5f5f5">
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Our team" %}
+      <div class="spacing"></div>
+      <p>
+        Our loyal and long serving team bring a wealth of built up knowledge and
+        experience enabling us to offer an exceptionally high standard of work.
+        We constantly invest in training, enabling us to provide you with a well
+        specified, high quality product, delivered and installed on time and
+        within budget.
+      </p>
+      <div class="two spacing"></div>
+    </div>
+  </div>
+  <div class="row">
+    {% for member in site.data.members %}
+    <div class="large-4 medium-4 columns">
+      <div class="mod modTeamMember">
+        <div class="member">
+          <img class="avatar" alt="" src="{{ member.avatar }}" />
+          <div class="overlay">
+            <div class="intro">
+              <h3>{{ member.name }}</h3>
+              <p>{{ member.position }}</p>
+              <ul class="socials">
+                {% for social in member.socials %}
+                <li>
+                  <a href="{{ social.link }}">
+                    <i class="fa fa-{{ social.icon }}"></i>
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="two spacing"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include our-customers.html %}

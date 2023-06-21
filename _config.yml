@@ -1,0 +1,23 @@
+# Site settings
+title: Marcol Fabrications
+email: info@marcolplastics.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  Marcol manufacture to a wide range of innovative designs ideas,
+  using industrialised plastics to fabricate the supply needs for
+  the Nuclear Industry to the Educational sector, in other words
+  products designed to operate across the complete spectrum of nearly
+  all environments and industries. Our range is very diverse and is
+  mostly tailor-made to suit each of our customer requirements.
+baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Pagination settings
+paginate: 3
+paginate_path: "blog/page:num"
+
+# Plugins
+plugins:
+  - jekyll-paginate
